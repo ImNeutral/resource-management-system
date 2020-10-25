@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df115e04-fe55-4172-9873-8fd0a7f3a6c2">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="26"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="months" class="java.util.List"/>
+	<parameter name="monthNames" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="freeAllotment4Months" class="java.util.List"/>
+	<field name="designation.value" class="java.lang.String"/>
+	<field name="level.value" class="java.lang.String"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="79" forecolor="#FFFFFF" backcolor="#53A292" uuid="007092e3-aa75-4d83-b13a-27c676696d9e"/>
+				<box leftPadding="25"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Available Resources]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch">
+			<textField pattern="MMMM d, yyyy" isBlankWhenNull="true">
+				<reportElement x="448" y="0" width="109" height="16" forecolor="#000000" uuid="5fb220d7-a683-4cbd-938e-50816ccd532f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="1" width="70" height="14" uuid="5111a589-f3d3-4f1e-ae22-57bd50562e87"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Date Printed:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="142" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="f28fcc12-ff69-41be-963f-83b06b956055"/>
+				<box padding="3" topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineColor="#4D998B"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="142" y="0" width="95" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="286fa6df-1df1-4f44-b397-d72bfe1e057f"/>
+				<box padding="3" topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineColor="#4D998B"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="101" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="c9d2770b-bd68-4c83-a538-5b2e4dc97886"/>
+				<box padding="3" topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineColor="#4D998B"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Level]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="338" y="0" width="56" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="4b42912b-911f-4926-97bb-3d65113f2233"/>
+				<box padding="3" topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0" lineColor="#53A292"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monthNames}.get( (Integer.parseInt( $P{months}.get(0).toString() ) - 1) )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="394" y="0" width="54" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="ceaa264c-3743-492d-af8d-37263712e6b0"/>
+				<box padding="3" topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0" lineColor="#53A292"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monthNames}.get( (Integer.parseInt( $P{months}.get(1).toString() ) - 1) )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="448" y="0" width="55" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="6cc50dd6-0778-4315-b98b-2b8691275522"/>
+				<box padding="3" topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0" lineColor="#53A292"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monthNames}.get( (Integer.parseInt( $P{months}.get(2).toString() ) - 1) )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="503" y="0" width="52" height="20" forecolor="#FFFFFF" backcolor="#53A292" uuid="40ddc707-7bd6-4405-9722-039fcebaae2c"/>
+				<box padding="3" topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0" lineColor="#53A292"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monthNames}.get( (Integer.parseInt( $P{months}.get(3).toString() ) - 1) )]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="142" height="20" uuid="333f88ef-728b-493f-a175-4d4cbbedeb8d"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="338" y="0" width="56" height="20" uuid="8f7a8609-66c6-4e78-93fd-eb59a867d322"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{freeAllotment4Months}.get(0).equals(0.0)? "-" : $F{freeAllotment4Months}.get(0)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="394" y="0" width="54" height="20" uuid="2b144faa-9823-403a-ac46-0995e40f5922"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{freeAllotment4Months}.get(1).equals(0.0)? "-" : $F{freeAllotment4Months}.get(1)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="448" y="0" width="55" height="20" uuid="b38bd7b1-1a03-4d01-8fad-6228cdc33ddc"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{freeAllotment4Months}.get(2).equals(0.0)? "-" : $F{freeAllotment4Months}.get(2)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="503" y="0" width="52" height="20" uuid="d12fb377-0d13-4806-88d2-e69d3b4f8db9"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{freeAllotment4Months}.get(3).equals(0.0)? "-" : $F{freeAllotment4Months}.get(3)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="142" y="0" width="95" height="20" uuid="d56210eb-fb3d-4940-b1fd-a8ccf79886ce"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{designation.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="237" y="0" width="101" height="20" uuid="7cf16f28-41c8-463c-9cf3-27c133f83f4e"/>
+				<box topPadding="3" leftPadding="7" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{level.value}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

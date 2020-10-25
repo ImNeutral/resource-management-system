@@ -1,0 +1,49 @@
+.navigation-main {
+	background-color: #53a292;
+}
+
+.navigation-main .navigation-item {
+	top: 0;
+	transition: 0.5s;
+}
+
+.navigation-main .navigation-item.active,
+.navigation-main .navigation-item:hover {
+	background-color: #488c7e;
+	color: white !important;
+	text-decoration: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+	position: relative;
+	top: 2px;
+}
+
+.projects-card {
+	background-color: #53a292;
+    color: white;
+}
+
+i.material-icons:hover {
+	cursor: pointer !important;
+	filter: brightness(85%);
+}
+
+i.material-icons {
+	margin: 0 5px 0 5px;
+	top: 0;
+	transition: 0.3s;
+}
+
+.data-tables {
+	width: 100% !important;
+	overflow: auto !important;
+}
+
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+#members #DataTables_Table_0_length {
+	display: none;
+}
